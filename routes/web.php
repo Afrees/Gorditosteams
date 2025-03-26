@@ -4,6 +4,8 @@ use App\Http\Controllers\CorpController;
 use App\Http\Controllers\BarrackController;
 use App\Http\Controllers\CompanyController;
 
+
+
 // Rutas para Corps
 Route::get('/corps', [CorpController::class, 'index']); // Mostrar lista
 Route::get('/corps/create', [CorpController::class, 'create']); // Formulario
