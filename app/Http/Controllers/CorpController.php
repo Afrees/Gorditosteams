@@ -2,31 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Corp;
+use Illuminate\Http\Request;
 
-class CorpController extends Controller
-{
+class CorpController extends Controller {
+    public function index() {
+        return view('corps.index', ['corps' => Corp::all()]);
+    }
     public function create() {
-
-        return view('frm_corp');
-
+        return view('corps.create');
     }
-
-    public function store(Request $request){
-        
-        $corp = new Corp();
-        $corp->name=$request->name;
-        $corp->denomination=$request->denomination;
-        $corp->phone=$request->phone;
-        $corp->email=$request->email;
-        $corp->save();
-        return $corp;
-
-      
-
+    public function store(Request $request) {
+        $request->validate([
+            'denomination' => 'required|max:50'
+        ]);
+        Corp::create($request->all());
+        return redirect()->route('corps.index')->with('success', 'Cuerpo registrado correctamente.');
     }
-
 }
-   
-
