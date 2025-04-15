@@ -10,6 +10,8 @@ return array(
     'App\\Http\\Controllers\\CompanyController' => $baseDir . '/app/Http/Controllers/CompanyController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\CorpController' => $baseDir . '/app/Http/Controllers/CorpController.php',
+    'App\\Models\\Service' => $baseDir . '/app/Models/Service.php',
+    'App\\Models\\Soldier' => $baseDir . '/app/Models/Soldier.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
